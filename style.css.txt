@@ -1,0 +1,243 @@
+/* 全域重設與字型設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 導覽列設計 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    background-color: rgba(11, 15, 25, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #34d399;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #34d399;
+}
+
+.nav-links .btn-primary {
+    background-color: #34d399;
+    color: #0b0f19;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.nav-links .btn-primary:hover {
+    background-color: #10b981;
+    color: #0b0f19;
+}
+
+/* 英雄形象區（現代漸層感） */
+.hero {
+    padding-top: 160px;
+    padding-bottom: 100px;
+    background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 50%);
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #9ca3af;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary-large {
+    background-color: #34d399;
+    color: #0b0f19;
+}
+
+.btn-primary-large:hover {
+    background-color: #10b981;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-large {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.btn-secondary-large:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+/* 區塊通用樣式 */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+/* 關於我們 */
+.about-section {
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 核心服務卡片 */
+.services-section {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background-color: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(52, 211, 153, 0.4);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+/* 聯繫行動區 */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(52, 211, 153, 0.05));
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    color: #9ca3af;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0b0f19;
+    padding: 0.8rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.03);
+}
+
+/* 頁尾 */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* 行動裝置響應式調整 */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.3rem; }
+    .nav-links { display: none; } /* 簡化：手機版隱藏導覽選單 */
+}
