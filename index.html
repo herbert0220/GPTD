@@ -3,78 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Farmers 太陽能農夫</title>
+    <title>太陽能農夫 - 智能電力設計 × ESG 永續發展</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 導覽列 -->
+    <!-- 頂部深綠色導覽列 -->
     <header class="navbar">
         <div class="container navbar-container">
-            <a href="#" class="logo">Solar Farmers</a>
+            <div class="logo-area">
+                <span class="logo-text">Solar Farmers</span>
+            </div>
             <nav class="nav-links">
-                <a href="#about">關於我們</a>
-                <a href="#services">核心服務</a>
-                <a href="#contact" class="btn-primary">立即諮詢</a>
+                <a href="#">首頁</a>
+                <a href="#features">核心項目</a>
+                <a href="https://line.me" target="_blank" class="nav-line-btn">LINE 線上諮詢</a>
             </nav>
         </div>
     </header>
 
-    <!-- 英雄形象區 -->
-    <section class="hero">
-        <div class="container hero-container">
-            <h1 class="hero-title">種下綠電，收穫永續未來</h1>
-            <p class="hero-subtitle">Solar Farmers 太陽能農夫，致力於推動現代綠能發展，為地球注入潔淨的再生能源，實現生態與經濟的雙贏。</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn-primary-large">了解服務</a>
-                <a href="#contact" class="btn-secondary-large">聯繫我們</a>
+    <!-- 核心形象大圖區（背景圖已連動至 hero-bg.jpg） -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-main-title">智能電力設計 ✕ ESG 永續鏈結</h1>
+            <p class="hero-sub-title">企業綠能轉型專家，打造高效能低碳未來</p>
+        </div>
+    </section>
+
+    <!-- 四大業務板塊區（照片皆已連動至您上傳的本地照片） -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                
+                <!-- 板塊 1：地熱開發 -->
+                <div class="feature-card">
+                    <div class="feature-image-wrapper">
+                        <img src="photo-geothermal.jpg" alt="地熱開發">
+                    </div>
+                    <h3 class="feature-title">地熱開發</h3>
+                    <p class="feature-desc">公民集資 ✕ 在地優先 ✕ 社區共享</p>
+                    <a href="https://line.me" target="_blank" class="line-update-btn">
+                        <span>💬 點擊查看最新消息 / 聯絡 LINE</span>
+                    </a>
+                </div>
+
+                <!-- 板塊 2：光電整合 -->
+                <div class="feature-card">
+                    <div class="feature-image-wrapper">
+                        <img src="photo-solar.jpg" alt="光電整合">
+                    </div>
+                    <h3 class="feature-title">光電整合</h3>
+                    <p class="feature-desc">農漁共生 ✕ 智慧能源 ✕ 微電網應用</p>
+                </div>
+
+                <!-- 板塊 3：台中示範廠 -->
+                <div class="feature-card">
+                    <div class="feature-image-wrapper">
+                        <img src="photo-taichung.jpg" alt="台中示範廠">
+                    </div>
+                    <h3 class="feature-title">台中示範廠</h3>
+                    <p class="feature-desc">綠能轉型示範場域 ✕ 智慧儲能系統應用</p>
+                </div>
+
+                <!-- 板塊 4：海外布局 -->
+                <div class="feature-card">
+                    <div class="feature-image-wrapper">
+                        <img src="photo-overseas.jpg" alt="海外布局">
+                    </div>
+                    <h3 class="feature-title">海外布局</h3>
+                    <p class="feature-desc">輸出台灣經驗 ✕ 拓展越南光儲市場</p>
+                </div>
+
             </div>
-        </div>
-    </section>
-
-    <!-- 關於我們 -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">關於 Solar Farmers</h2>
-            <p class="section-desc">我們將陽光轉化為永續的動力。透過創新的太陽能技術與專業的土地規劃，協助企業、農民及個人建立安全、高效的綠能發電系統，讓每一度電都帶著保護地球的使命。</p>
-        </div>
-    </section>
-
-    <!-- 核心服務 -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">我們的服務項目</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">☀️</div>
-                    <h3>太陽能系統建置</h3>
-                    <p>專業的一條龍規劃與專業施工，極大化發電效能與空間利用率。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>農電共生規劃</h3>
-                    <p>讓土地發揮雙重價值，在持續發展農業的同時獲得潔淨綠電收益。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>維運與售後服務</h3>
-                    <p>全天候智慧監控與定期清潔檢修，確保您的發電系統長年穩定運作。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📜</div>
-                    <h3>政策與補助諮詢</h3>
-                    <p>專業團隊協助對接最新綠能政策，輕鬆搞定各項法規申請與補助。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 聯繫行動區 -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>準備好加入綠能行列了嗎？</h2>
-            <p>與我們的綠能專家聊聊，為您量身打造專屬的太陽能發電解決方案。</p>
-            <a href="mailto:info@solarfarmers.com" class="btn-cta">立即發送郵件諮詢</a>
         </div>
     </section>
 
@@ -83,6 +84,5 @@
         <p>&copy; 2026 Solar Farmers 太陽能農夫. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
