@@ -4,75 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>晨世能源 × 源能資本 - 金峰嘉蘭地熱專案</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 融合 LOGO 的部落大地色系 CSS 變數 */
+        :root {
+            --primary-dark: #3D2515;   /* 深焦糖褐：LOGO外圈與線條 */
+            --earth-red: #A84428;      /* 火山紅：LOGO地熱與大地 */
+            --tribal-gold: #DEAF62;    /* 太陽金黃：LOGO太陽與能量背景 */
+            --forest-green: #5B6B4E;   /* 祖靈綠：LOGO風力背景 */
+            --sand-beige: #F1E5CB;     /* 溫潤沙米：LOGO主背景 */
+            --text-dark: #2B1A0E;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: var(--sand-beige);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* 導覽列 */
+        .navbar {
+            background-color: var(--primary-dark);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--tribal-gold);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            color: var(--sand-beige);
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--sand-beige);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--tribal-gold);
+        }
+
+        .nav-line-btn {
+            background-color: var(--earth-red);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .nav-line-btn:hover {
+            background-color: #BD4F31 !important;
+            color: #fff !important;
+        }
+
+        /* 形象大圖區 */
+        .hero-section {
+            background: linear-gradient(rgba(61, 37, 21, 0.75), rgba(61, 37, 21, 0.85)), url('hero.jpg') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: var(--sand-beige);
+            border-bottom: 8px solid var(--earth-red);
+        }
+
+        .hero-main-title {
+            font-size: 2.5rem;
+            color: var(--tribal-gold);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero-sub-title {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* 四大板塊區 */
+        .features-section {
+            padding: 60px 0;
+            background-color: #E6D9BC; /* 微調深一點的沙色底襯托卡片 */
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--sand-beige);
+            border: 3px solid var(--primary-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 0 var(--primary-dark);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-image-wrapper {
+            width: 100%;
+            height: 180px;
+            background-color: var(--primary-dark);
+            overflow: hidden;
+        }
+
+        .feature-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: var(--earth-red);
+            padding: 15px 15px 5px 15px;
+            font-weight: bold;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            padding: 0 15px 20px 15px;
+            opacity: 0.85;
+        }
+
+        .line-update-btn {
+            display: block;
+            background-color: var(--forest-green);
+            color: var(--sand-beige);
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-top: 2px solid var(--primary-dark);
+            transition: background 0.3s;
+        }
+
+        .line-update-btn:hover {
+            background-color: #4A573F;
+        }
+
+        /* 頁尾 */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--sand-beige);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.85rem;
+            border-top: 4px solid var(--earth-red);
+            opacity: 0.95;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 頂部深綠色導覽列 -->
+    <!-- 頂部導覽列 -->
     <header class="navbar">
         <div class="container navbar-container">
             <div class="logo-area">
+                <!-- 請將 logo 圖片檔名替換為您的 LOGO 圖檔 -->
+                <img src="logo.png" alt="專案LOGO" class="logo-img">
                 <span class="logo-text">晨世能源 ✕ 源能資本</span>
             </div>
             <nav class="nav-links">
                 <a href="#">首頁</a>
                 <a href="#features">專案核心</a>
-                <a href="https://lin.ee/uNjqsw8" target="_blank" class="nav-line-btn">LINE 線上諮詢</a>
+                <a href="https://lin.ee" target="_blank" class="nav-line-btn">LINE 線上諮詢</a>
             </nav>
         </div>
     </header>
 
-    <!-- 核心形象大圖區（背景圖已連動至 hero.jpg） -->
+    <!-- 形象大圖區 -->
     <section class="hero-section">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-main-title">金峰嘉蘭地熱專案 ✕ 源能資本</h1>
-            <p class="hero-sub-title">晨世能源攜手綠能投資，驅動台東永續地熱新未來</p>
+            <h1 class="hero-main-title">金峰嘉蘭地熱專案</h1>
+            <p class="hero-sub-title">大地與祖靈的餽贈。晨世能源攜手源能資本，以綠色金融驅動台東部落永續地熱新未來。</p>
         </div>
     </section>
 
-    <!-- 四大業務板塊區 -->
+    <!-- 四大核心板塊 -->
     <section id="features" class="features-section">
         <div class="container">
             <div class="features-grid">
                 
-                <!-- 板塊 1：嘉蘭地熱開發 -->
+                <!-- 板塊 1 -->
                 <div class="feature-card">
                     <div class="feature-image-wrapper">
-                        <img src="photo-geothermal.jpg" alt="金峰嘉蘭地熱開發">
+                        <img src="photo-geothermal.jpg" alt="嘉蘭地熱開發">
                     </div>
                     <h3 class="feature-title">嘉蘭地熱開發</h3>
-                    <p class="feature-desc">深耕台東金峰鄉 ✕ 打造高效能地熱發電廠</p>
+                    <p class="feature-desc">深耕台東金峰鄉，運用純淨地熱基載電力，打造與大自然和諧共生的能源示範案場。</p>
                     <a href="https://line.me" target="_blank" class="line-update-btn">
-                        <span>💬 點擊查看最新消息 / 聯絡 LINE</span>
+                        <span>💬 點擊聯絡 LINE 查看最新進度</span>
                     </a>
                 </div>
 
-                <!-- 板塊 2：源能資本投資 -->
+                <!-- 板塊 2 -->
                 <div class="feature-card">
                     <div class="feature-image-wrapper">
                         <img src="photo-investment.jpg" alt="源能資本投資">
                     </div>
                     <h3 class="feature-title">源能資本投資</h3>
-                    <p class="feature-desc">強大資本挹注 ✕ 精準綠色金融驅動永續轉型</p>
+                    <p class="feature-desc">綠色金融強大挹注，精準對接 ESG 永續轉型指標，提供地熱專案最穩健的資金後盾。</p>
                 </div>
 
-                <!-- 板塊 3：ESG 地方共生 -->
+                <!-- 板塊 3 -->
                 <div class="feature-card">
                     <div class="feature-image-wrapper">
-                        <img src="photo-community.jpg" alt="ESG 地方共生">
+                        <img src="photo-community.jpg" alt="部落共生與 ESG">
                     </div>
-                    <h3 class="feature-title">ESG 地方共生</h3>
-                    <p class="feature-desc">在地部落優先 ✕ 利益社區共享 ✕ 實踐永續發展</p>
+                    <h3 class="feature-title">部落共生與 ESG</h3>
+                    <p class="feature-desc">堅持在地部落優先！實踐利益社區共享，尊重排灣族與魯凱族文化，共創在地就業機會。</p>
                 </div>
 
-                <!-- 板塊 4：前瞻地熱技術 -->
+                <!-- 板塊 4 -->
                 <div class="feature-card">
                     <div class="feature-image-wrapper">
-                        <img src="photo-technology.jpg" alt="前瞻地熱技術">
+                        <img src="photo-technology.jpg" alt="前瞻再生能源">
                     </div>
-                    <h3 class="feature-title">前瞻地熱技術</h3>
-                    <p class="feature-desc">先進鑽探工法 ✕ 穩定全天候基載電力輸出</p>
+                    <h3 class="feature-title">前瞻再生能源</h3>
+                    <p class="feature-desc">借鏡 LOGO 融合風、光、地熱之精神，引進先進鑽探技術，提供全天候穩定的綠電輸出。</p>
                 </div>
 
             </div>
@@ -81,7 +273,7 @@
 
     <!-- 頁尾 -->
     <footer class="footer">
-        <p>&copy; 2026 晨世能源股份有限公司 & 源能資本. All rights reserved.</p>
+        <p>&copy; 2026 小農綠電 & 晨世能源 & 源能資本. All rights reserved.</p>
     </footer>
 
 </body>
